@@ -28,7 +28,7 @@ public U0 PrintPlay(U8 *st,U8 *words=NULL)
   music.play_note_num=0;
   while (*st) {
     timeout_val=cnts.jiffies;
-    tie=FALSE;
+    tie=FALSE;
 
     do {
       last_st=st;
@@ -218,7 +218,7 @@ U0 Outro()
  currentLine = "";
  PrintPlay("wArqBwArqAeF#qAeF#qAeF#qAeF#hAqBF#hAeF#ED4BAwB", 
       "Oh-\0oh-\0oh-\0oh, \0ye\0ah.\0");
-
+
 }
 
 U0 Run(){
@@ -226,7 +226,9 @@ U0 Run(){
  WinBorder;
  DocCursor;
  DocClear;
+
  Fs->draw_it=&DrawIt; 
+
  Verse1;
  PreChorus;
  Verse2;
@@ -236,4 +238,31 @@ U0 Run(){
  Outro;
  Chorus;
  Play("4qDhEwD");
+ currentLine = "";
+ currentLine = MStrPrint("%s%s",currentLine, "H");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "e");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "l");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "l");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "o");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, " ");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "L");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "a");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "i");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "n");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, ".");Sleep(2500);
+ currentLine = "";
+
+ currentLine = MStrPrint("%s%s",currentLine, "N");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "o");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, " ");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "n");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "e");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "w");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, " ");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "m");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "a");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "i");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, "l");Sleep(500);
+ currentLine = MStrPrint("%s%s",currentLine, ".");Sleep(2500);
+
 } Run;
