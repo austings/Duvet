@@ -28,7 +28,7 @@ public U0 PrintPlay(U8 *st,U8 *words=NULL)
   music.play_note_num=0;
   while (*st) {
     timeout_val=cnts.jiffies;
-    tie=FALSE;
+    tie=FALSE;
 
     do {
       last_st=st;
@@ -84,14 +84,14 @@ public U0 PrintPlay(U8 *st,U8 *words=NULL)
     music.play_note_num++;
   }
 }
-
+I64 counter = 0;
 
 U0 DrawIt(CTask *task,CDC*dc)
 {
  I64 i;
  dc->color = BLACK;
  GrRect(dc,0,0,640,480);
- Sprite3(dc,0,0,0,GetBG);
+ Sprite3(dc,0,0,0,GetBG);
  dc->color = WHITE;
  for(i=0;i<StrLen(currentLine);i++)
  {     
@@ -161,11 +161,11 @@ U0 Verse2()
 U0 PreChorus()
 {
  currentLine = "";
- PrintPlay("4qBhAqEhEqE","\nI am \0falling,\0");
+ PrintPlay("4hBqAE.EtqE","\nI am \0falling,\0");
  currentLine = "";
- PrintPlay("4qBBhAqEhEqEF#","I am \0fading.\0");
+ PrintPlay("4hBqBAE.EtqE.F#t","I am \0fading.\0");
  currentLine = "";
- PrintPlay("4qBhAqEhEqEDEhB","I have \0lost \0it \0all.\0");
+ PrintPlay("4qBAE.EtE.EtD.Eth3B","I have \0lost \0it \0all.\0");
 
 }
 
